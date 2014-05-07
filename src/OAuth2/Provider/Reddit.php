@@ -5,14 +5,8 @@ namespace OAuth2\Provider;
 use OAuth2\Provider;
 use OAuth2\Token_Access;
 
-/*
- * Strava API credentials: https://www.strava.com/settings/api
- * Strava API docs: http://strava.github.io/api/v3/oauth/
- */
-
-
 /**
- * Strava OAuth Provider
+ * Reddit OAuth Provider
  *
  * @package    laravel-oauth2
  * @category   Provider

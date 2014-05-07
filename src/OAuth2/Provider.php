@@ -143,6 +143,7 @@ abstract class Provider {
 			'state' 			=> $state,
 			'scope'				=> is_array($this->scope) ? implode($this->scope_seperator, $this->scope) : $this->scope,
 			'response_type' 	=> 'code',
+			'duration'			=> 'permanent',
 			'approval_prompt' 	=> isset($options['approval_prompt']) ? $options['approval_prompt'] : 'force' // - google force-recheck
 		);
 
@@ -232,7 +233,7 @@ abstract class Provider {
 			break;
 
 			case 'refresh_token':
-				return Token::factory('refresh', $return);
+				return Token::factory('access', $return);
 			break;
 		}
 
