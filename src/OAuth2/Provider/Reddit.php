@@ -52,7 +52,8 @@ class Reddit extends Provider {
 			'http' => array(
 				'method'  => 'GET',
 				'header'  => array('Content-type: application/x-www-form-urlencoded',
-									'Authorization: bearer ' . $token->access_token),
+									'Authorization: bearer ' . $token->access_token,
+									'User-Agent: Readditing.com by Epick_362'),
 				'content' => $postdata
 			)
 		);
