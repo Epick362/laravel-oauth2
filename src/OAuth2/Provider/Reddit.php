@@ -15,7 +15,7 @@ use OAuth2\Token_Access;
 
 class Reddit extends Provider {
 	public $name = 'reddit';
-	public $scope = array('identity', 'read');
+	public $scope = array('identity', 'read', 'vote', 'edit', 'history', 'save', 'submit', 'subscribe');
 
 	/**
 	 * @var  string  the method to use when requesting tokens
