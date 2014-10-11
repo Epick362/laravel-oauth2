@@ -61,8 +61,8 @@ class Reddit extends Provider {
 		]);
 
 		try {
-			$client->post($url, [
-				'body' => [
+			$client->get($url, [
+				'query' => [
 					'access_token' => $token->access_token,
 				]
 			]);
