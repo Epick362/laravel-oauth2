@@ -69,7 +69,7 @@ class Reddit extends Provider {
 
 			return $response->json();
 		} catch (\Exception $e) {
-			return App::abort(503);
+			return \App::abort(503);
 		}
 	}
 }
