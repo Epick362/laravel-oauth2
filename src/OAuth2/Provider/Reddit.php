@@ -60,9 +60,8 @@ class Reddit extends Provider {
 		    ]
 		]);
 
-		$client->get($url);
-
 		try {
+			$response = $client->get($url);
 
 			return $response->json();
 		} catch (\Exception $e) {
