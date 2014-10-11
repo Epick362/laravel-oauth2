@@ -60,11 +60,7 @@ class Reddit extends Provider {
 		    ]
 		]);
 
-		$client->get($url, [
-			'content' => [
-				'access_token' => $token->access_token,
-			]
-		]);
+		$client->get($url);
 
 		try {
 
