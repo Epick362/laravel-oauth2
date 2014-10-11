@@ -60,18 +60,16 @@ class Reddit extends Provider {
 		    ]
 		]);
 
-		$client->post($url, [
-			'body' => [
-				'access_token' => $token->access_token,
-			]
-		]);
-
 		try {
+			$client->post($url, [
+				'body' => [
+					'access_token' => $token->access_token,
+				]
+			]);
+
 			return $response->json();
 		} catch (\Exception $e) {
 			return App::abort(503);
 		}
-
-		return $user;
 	}
 }
